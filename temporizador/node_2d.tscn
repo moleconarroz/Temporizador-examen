@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://l4oo47fltm7n"]
+
+[ext_resource type="Texture2D" uid="uid://84w87fqb7gyq" path="res://timer.png" id="1_kylu0"]
+[ext_resource type="Script" path="res://node_2d.gd" id="1_n87a4"]
+[ext_resource type="FontFile" uid="uid://16bj0752ddvm" path="res://fonts/retrofont.ttf" id="3_edihd"]
+[ext_resource type="Script" path="res://Timer.gd" id="3_ffupg"]
+[ext_resource type="Script" path="res://Button_Start.gd" id="5_km1o5"]
+
+[node name="Main" type="CanvasLayer"]
+script = ExtResource("1_n87a4")
+
+[node name="Sprite_temporizador" type="Sprite2D" parent="."]
+position = Vector2(551, 313)
+scale = Vector2(0.479741, 0.499538)
+texture = ExtResource("1_kylu0")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0.176419, 0.176419, 0.176419, 1)
+offset_left = 414.0
+offset_top = 159.0
+offset_right = 672.0
+offset_bottom = 339.0
+theme_override_fonts/font = ExtResource("3_edihd")
+theme_override_font_sizes/font_size = 50
+text = "00:00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+script = ExtResource("3_ffupg")
+
+[node name="Button_Start" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.298039)
+offset_left = 365.0
+offset_top = 463.0
+offset_right = 421.0
+offset_bottom = 494.0
+text = "START"
+script = ExtResource("5_km1o5")
+
+[node name="Button_Stop" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0.290196)
+offset_left = 502.0
+offset_top = 463.0
+offset_right = 557.0
+offset_bottom = 494.0
+text = "STOP"
+
+[node name="Button_Mode" type="Button" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 782.0
+offset_top = 333.0
+offset_right = 839.0
+offset_bottom = 364.0
+text = "MODE
+"
+
+[node name="Button_clear" type="Button" parent="."]
+offset_left = 669.0
+offset_top = 96.0
+offset_right = 730.0
+offset_bottom = 127.0
+text = "CLEAR
+"
